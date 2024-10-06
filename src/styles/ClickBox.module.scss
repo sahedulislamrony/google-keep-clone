@@ -1,0 +1,35 @@
+@import "root";
+
+.clickBox {
+  width: var(--grid-width);
+  height: 4.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.15),
+    0 -0.2rem 0.4rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+
+  .click {
+    width: calc(var(--grid-width) - 10rem);
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1.8rem;
+    user-select: none;
+    cursor: pointer;
+
+    h3 {
+      color: $color-primary;
+      @include robotoFont(1.8rem, 400);
+    }
+  }
+
+  // icons
+  .icon {
+    @include icon(4.5rem);
+  }
+}

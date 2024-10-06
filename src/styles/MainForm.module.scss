@@ -1,0 +1,58 @@
+@import "root";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import "breakpoint";
+
+.form {
+  width: 100%;
+  background-color: $color-bg;
+  h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3.5rem;
+    color: $color-text;
+    text-align: center;
+    padding-top: 5rem;
+  }
+  .content {
+    margin-top: 1.5rem;
+
+    width: 100%;
+    // height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image {
+    width: 55rem;
+    object-fit: cover;
+    display: none;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+@include respond-to("sm") {
+  .form {
+    .image {
+      display: block;
+    }
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+@include respond-to("xs") {
+  .form {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}

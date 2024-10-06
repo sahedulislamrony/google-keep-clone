@@ -1,0 +1,196 @@
+@import "root";
+@import "breakpoint";
+
+@mixin normal {
+  .leftNav {
+    width: 100%;
+    height: 100%;
+    background-color: $color-bg;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+
+      ul {
+        width: 100%;
+        list-style: none;
+        padding-top: 1rem;
+
+        li {
+          width: 100%;
+          height: 5.2rem;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: 1.8rem;
+
+          border-top-right-radius: 5rem;
+          border-bottom-right-radius: 5rem;
+
+          &:hover {
+            background-color: $color-hover;
+          }
+
+          // active class for the current page
+          &.active {
+            background-color: $active-nav-bg;
+
+            a .icon {
+              color: $color-text;
+            }
+          }
+
+          a {
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+
+            // icons
+            .icon {
+              @include icon(5rem);
+              &:hover {
+                background-color: transparent;
+              }
+            }
+
+            h1 {
+              display: grid;
+              place-items: center;
+              @include robotoFont(1.4rem, 500);
+
+              color: $color-text;
+              transform: scale(1);
+              transform-origin: left;
+              transition: all 0.2s ease;
+              padding-left: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin minimize {
+  .leftNav {
+    .wrapper {
+      transition: all 0.2s ease;
+
+      // minimize the left nav
+      ul {
+        li {
+          border-radius: none;
+          background-color: transparent;
+          &.active {
+            background-color: transparent;
+
+            a {
+              .icon {
+                background-color: $active-nav-bg;
+                &:hover {
+                  background-color: $active-nav-bg;
+                }
+              }
+            }
+          }
+          &:hover {
+            background-color: transparent;
+          }
+          a {
+            h1 {
+              transition: all 0.2s ease;
+              transform: scale(0);
+              transform-origin: left;
+            }
+            .icon {
+              &:hover {
+                background-color: $color-hover;
+                outline: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  position: absolute;
+  bottom: 2rem;
+  left: 0rem;
+  width: 100%;
+
+  @include robotoFont(0.7rem, 400);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-primary;
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@include respond-to(xs) {
+  section[role="navigation"] {
+    transition: all 0.2s ease;
+    width: 10rem;
+    @include normal;
+    @include minimize;
+    .copyright {
+      visibility: hidden;
+    }
+  }
+
+  section[role="navigation"] {
+    &.minimize {
+      background-color: $color-bg;
+      position: relative;
+      width: 30rem;
+      height: calc(100vh - 6rem);
+      transition: all 0.2s ease;
+
+      @include normal;
+      .copyright {
+        visibility: visible;
+      }
+    }
+  }
+}
+@include respond-to(sm) {
+  section[role="navigation"] {
+    background-color: $color-bg;
+    position: relative;
+    width: 30rem;
+    height: calc(100vh - 6rem);
+    transition: all 0.2s ease;
+
+    @include normal;
+    .copyright {
+      visibility: visible;
+    }
+  }
+
+  // minimizing effect
+  section[role="navigation"] {
+    &.minimize {
+      transition: all 0.2s ease;
+      width: 10rem;
+
+      @include minimize;
+
+      // left nav end
+      .copyright {
+        visibility: hidden;
+      }
+    }
+  }
+}

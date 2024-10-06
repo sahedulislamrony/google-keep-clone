@@ -1,0 +1,24 @@
+@import "root";
+
+.noData {
+  margin-top: 15rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .icon {
+    @include icon(15rem);
+    span {
+      font-size: 12rem;
+      color: #c6cace;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  .text {
+    @include ArvoFont(400, normal);
+    font-size: 2.2rem;
+    color: $color-primary;
+  }
+}

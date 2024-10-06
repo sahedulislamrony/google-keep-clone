@@ -1,0 +1,20 @@
+@import "root";
+@import "breakpoint";
+
+.center {
+  height: 100%;
+  flex: 3;
+  position: relative;
+}
+
+// responsive design
+
+@include respond-to(md) {
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,200 @@
+@import "root";
+@import "breakpoint";
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+section.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-bg;
+
+  .content {
+    width: 54.4rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 3rem;
+
+    .topHeading {
+      .logo {
+        @include circle(8rem);
+        //    border:.2rem solid $color-primary;
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        display: grid;
+        place-items: center;
+        filter: drop-shadow(0 0 0.5rem rgb(226, 226, 226));
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      h1 {
+        @include ArvoFont(700, normal);
+        font-size: 2.5rem;
+        color: $color-text;
+        text-align: center;
+      }
+      h3 {
+        @include ArvoFont(400, italic);
+        font-size: 1.5rem;
+        color: $color-primary;
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 1rem;
+        a {
+          all: unset;
+          cursor: pointer;
+          color: $color-primary;
+          font-weight: 700;
+          font-style: italic;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .signInMethods {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &.disable {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+
+    .alternateOption {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        .line1,
+        .line2 {
+          width: 43%;
+          height: 0.1rem;
+          background-color: $primary-dark;
+        }
+        .lineText {
+          @include ArvoFont(400, normal);
+          font-size: 1.2rem;
+          color: $color-primary;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .bottomText {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      .privacy {
+        p {
+          @include ArvoFont(400, italic);
+          font-size: 1.3rem;
+          color: $color-primary;
+          text-align: center;
+          a {
+            all: unset;
+            cursor: pointer;
+            color: #0988bb;
+            font-weight: 700;
+            font-style: italic;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .line {
+        margin-top: 3rem;
+        width: 100%;
+        height: 0.1rem;
+        background-color: $primary-dark;
+      }
+      .account {
+        margin-top: 2rem;
+        p {
+          @include ArvoFont(400, italic);
+          font-size: 1.7rem;
+          color: $color-text;
+          text-align: center;
+          a {
+            all: unset;
+            cursor: pointer;
+            color: #0988bb;
+            font-weight: 700;
+            font-style: normal;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .error {
+      margin-top: 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+
+      background-color: bisque;
+      border-radius: 0.5rem;
+
+      @include ArvoFont(400, normal);
+      font-size: 1.5rem;
+      color: rgb(212, 4, 4);
+
+      a {
+        all: unset;
+        cursor: pointer;
+        color: #3d3939;
+        font-weight: 700;
+        font-style: italic;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(xs) {
+  section.main {
+    .content {
+      width: 40rem;
+    }
+  }
+}
+
+@include respond-to(sm) {
+  section.main {
+    .content {
+      width: 54.4rem;
+    }
+  }
+}

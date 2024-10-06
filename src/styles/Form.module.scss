@@ -1,0 +1,83 @@
+@import "root";
+
+.form {
+  width: 100%;
+
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      width: 100%;
+      @include ArvoFont(400, normal);
+      font-size: 1.5rem;
+      color: $color-text;
+
+      .rememberMe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        label {
+          margin-left: 0.5rem;
+        }
+        input {
+          margin-left: 0.2rem;
+        }
+      }
+      .forgotPassword {
+        a {
+          all: unset;
+          cursor: pointer;
+          color: #0988bb;
+          margin-right: 0.2rem;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    button {
+      all: unset;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      width: 100%;
+      text-align: center;
+      @include ArvoFont(700, normal);
+      font-size: 1.8rem;
+      color: $color-text;
+      background-color: $color-bg;
+      border-radius: 0.8rem;
+      cursor: pointer;
+      text-transform: capitalize;
+      border: 0.1rem solid $color-primary;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-color: bisque;
+      }
+
+      &:disabled {
+        background-color: $color-primary;
+        color: $color-bg;
+        cursor: not-allowed;
+      }
+    }
+
+    .errMsg {
+      color: rgba(255, 0, 0, 0.838);
+      margin-top: 1rem;
+      @include ArvoFont(400, normal);
+      font-size: 1.5rem;
+    }
+  }
+}

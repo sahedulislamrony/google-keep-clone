@@ -1,0 +1,27 @@
+@import "root";
+
+// text note component
+.textNote {
+  width: 100%;
+  height: fit-content;
+
+  .title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 2.2rem;
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+    h3 {
+      color: $color-text;
+      @include robotoFont(1.6rem, 500);
+    }
+  }
+
+  p {
+    padding-right: 0;
+    color: $color-text;
+    @include robotoFont(1.6rem, 400);
+  }
+}

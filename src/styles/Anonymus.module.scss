@@ -1,0 +1,83 @@
+@import "root";
+@import "breakpoint";
+.buttons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  a {
+    display: inline-block;
+    margin-right: 2rem;
+    padding: 1rem 2rem;
+    border: 0.2rem solid transparent;
+    border-radius: 0.5rem;
+    background-color: $color-bg;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    button {
+      all: unset;
+      display: grid;
+      place-items: center;
+
+      @include robotoFont(1.5rem, 500);
+    }
+
+    &:first-child {
+      color: $color-primary;
+
+      &:hover {
+        background-color: rgba(56, 70, 219, 0.1);
+        text-decoration: underline;
+      }
+    }
+    &:last-child {
+      border: 0.2rem solid rgb(54, 68, 217);
+      &:hover {
+        background-color: rgb(54, 68, 217);
+        color: #fff;
+      }
+      font-size: 1.3rem;
+      color: rgb(54, 68, 217);
+    }
+  }
+}
+
+@include respond-to(xs) {
+  .buttons {
+    a {
+      &:last-child {
+        width: 10rem;
+        button {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(sm) {
+  .buttons {
+    a {
+      &:last-child {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}
+
+@include respond-to(xl) {
+  .buttons {
+    a {
+      &:last-child {
+        padding: 1rem 2rem;
+        button {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

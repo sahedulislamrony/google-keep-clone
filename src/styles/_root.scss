@@ -1,0 +1,78 @@
+// Color Variables
+
+$bg-dark: #202124;
+$bg-light: #fff;
+$primary-dark: #c8cacd;
+$primary-light: #5f6368;
+$input-bg: #f1f3f4;
+$active-nav-bg: #feefc3;
+$color-text: #333436;
+
+$color-hover: rgba(60, 64, 67, 0.08); // hover color
+
+$color-bg: $bg-light; // default background color
+$color-primary: $primary-light; // default text color
+
+// width maintainance
+
+// width of the main content
+
+:root {
+  --grid-width: 60rem;
+  --flex-width: 24rem;
+}
+
+// $padding: 1rem;
+
+// Font Variables
+@import "fonts.scss";
+
+@mixin fontHeading($size, $color) {
+  font-family: "Product Sans Regular";
+  font-size: $size;
+  color: $color;
+  font-weight: normal;
+}
+
+@mixin fontText($size, $color) {
+  font-family: "Product Sans Light Regular";
+  font-size: $size;
+  color: $color;
+  font-weight: normal;
+}
+
+// Circle mixin
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin robotoFont($size, $weight) {
+  font-family: "Roboto", sans-serif;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: $size;
+}
+
+@mixin icon($size) {
+  @include circle($size);
+  display: grid;
+  place-items: center;
+  color: $color-primary;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-hover;
+    outline: none;
+  }
+  span {
+    font-size: calc($size * 0.5);
+  }
+}
+// 400 , 700 , italic , normal
+@mixin ArvoFont($weight, $style) {
+  font-family: "Arvo", sans-serif;
+  font-style: $style;
+  font-weight: $weight;
+}

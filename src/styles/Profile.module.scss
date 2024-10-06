@@ -1,0 +1,53 @@
+@import "root";
+
+// icons for user
+.icons {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+
+  .icon {
+    @include icon(5rem);
+  }
+}
+
+// user profile
+.profile {
+  flex: 3;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  .img {
+    @include circle(4.5rem);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    border: 0.5rem solid transparent;
+
+    &:hover {
+      border-color: $input-bg;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      // for alt text
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  .icon {
+    @include icon(5rem);
+  }
+} // profile end here

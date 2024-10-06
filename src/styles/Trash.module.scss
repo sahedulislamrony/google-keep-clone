@@ -1,0 +1,35 @@
+@import "root";
+
+.topText {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 3rem;
+
+  .text {
+    @include ArvoFont(400, italic);
+    font-size: 1.4rem;
+    color: $color-text;
+  }
+
+  .btn {
+    all: unset;
+    cursor: pointer;
+    @include ArvoFont(400, normal);
+    font-size: 1.4rem;
+    color: rgb(26, 115, 232);
+    text-transform: capitalize;
+    padding: 1rem 2rem;
+    border: 0.2rem solid transparent;
+    border-radius: 0.5rem;
+    transition: all 0.15s ease-in-out;
+    margin-left: 1rem;
+    &:hover {
+      background-color: rgba(66, 133, 244, 0.039);
+      border-color: rgba(26, 115, 232, 0.59);
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@import "root";
+@import "breakpoint";
+
+.profileMenu {
+  position: absolute;
+  user-select: text;
+  width: 30rem;
+  height: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  // background-color: rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 2px 6px 2px rgba(60, 64, 67, 0.15);
+  top: 100%;
+  right: 3rem;
+  border-radius: 0.4rem;
+  transition: all 0.2s ease;
+  z-index: 1111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .img {
+    @include circle(15rem);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    border: 0.5rem solid #838383;
+    transition: all 0.15s ease;
+    &:hover {
+      border-color: #0bc4d8;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      //   // for alt text
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  .info {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      @include ArvoFont(700, normal);
+      font-size: 2rem;
+      color: rgb(62, 62, 62);
+    }
+
+    h3 {
+      margin-top: 0.5rem;
+      @include ArvoFont(700, italic);
+      font-size: 1.3rem;
+      color: $color-primary;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .logout {
+    all: unset;
+    cursor: pointer;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40%;
+    height: 4rem;
+    border: 0.1rem solid #838383;
+    border-radius: 0.8rem;
+    transition: all 0.15s ease;
+    &:hover {
+      background-color: bisque;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #f8f8f8;
+      border-color: #838383;
+      justify-content: center;
+    }
+
+    h4 {
+      @include ArvoFont(700, normal);
+      font-size: 1.5rem;
+      color: rgb(62, 62, 62);
+      text-transform: capitalize;
+    }
+    .icon {
+      @include icon(4rem);
+      span {
+        font-size: 2.2rem;
+        color: rgb(62, 62, 62);
+      }
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// // responsive design
+
+// @include respond-to(xs) {
+//     .profileMenu {
+//       right: -5rem;
+//     }
+//   }

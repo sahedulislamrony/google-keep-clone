@@ -1,0 +1,11 @@
+@import "root";
+
+// bottom action icons
+.actionGroup {
+  width: var(--grid-width);
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}

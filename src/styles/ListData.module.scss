@@ -1,0 +1,54 @@
+@import "root";
+
+// list component
+.listNote {
+  width: 100%;
+  height: fit-content;
+
+  .title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 2.2rem;
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+    h3 {
+      color: $color-text;
+      @include robotoFont(1.6rem, 500);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-right: 2.2rem;
+      padding-top: 0;
+      padding-bottom: 1.5rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      label {
+        padding-left: 1.5rem;
+        color: $color-text;
+        @include robotoFont(1.4rem, 400);
+      }
+
+      input:checked {
+        accent-color: #b7b8b8;
+        & + label {
+          text-decoration: line-through;
+          color: #b7b8b8;
+        }
+      }
+    }
+  }
+}

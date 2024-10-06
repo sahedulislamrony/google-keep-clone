@@ -1,0 +1,99 @@
+@import "root";
+
+// note component
+.note {
+  width: var(--flex-width);
+  min-height: 12.5rem;
+  border-radius: 1rem;
+  position: relative;
+  background-color: $color-bg;
+  border: 0.1rem solid #e0e0e0;
+
+  .pinBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    @include icon(3.8rem);
+    span {
+      font-size: 2.3rem;
+    }
+    &.pinned {
+      color: #323535;
+      background-color: #d8d5d5;
+    }
+
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    background-color: $color-text;
+
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    @include icon(2rem);
+    span {
+      font-size: 1.8rem;
+      color: $color-bg;
+    }
+    &:hover {
+      background-color: currentColor;
+      color: currentColor;
+    }
+  }
+  .actionGroup {
+    width: 100%;
+    height: 4rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  .actionIcons {
+    width: var(--flex-width);
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    .icon {
+      @include icon(3.6rem);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+      0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    .pinBtn {
+      opacity: 1;
+    }
+    .select {
+      opacity: 1;
+    }
+    .actionGroup {
+      opacity: 1;
+    }
+  }
+  .content {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+    overflow-y: auto;
+    p {
+      color: $color-text;
+      @include robotoFont(1.4rem, 400);
+    }
+  }
+
+  // grid view
+  &.grid_view {
+    width: var(--grid-width);
+  }
+}

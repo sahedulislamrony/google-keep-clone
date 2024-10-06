@@ -1,0 +1,129 @@
+@import "root";
+
+.history {
+  width: 40rem;
+  height: auto;
+  padding: 2rem;
+  padding-bottom: 1rem;
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    & > h1 {
+      @include ArvoFont(400, normal);
+      font-size: 2rem;
+    }
+    .icon {
+      @include icon(4rem);
+      span {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .info {
+    @include ArvoFont(400, normal);
+    font-size: 1.25rem;
+    color: #616161;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    min-height: 29.5rem;
+    .version {
+      height: 8rem;
+      border-top: 0.1rem solid #a1a3a3;
+      padding-top: 1rem;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      .title {
+        .date {
+          @include ArvoFont(400, normal);
+          font-size: 1.5rem;
+          color: #1f2020;
+        }
+        .icon {
+          @include icon(3rem);
+          span {
+            font-size: 2rem;
+          }
+          &:hover {
+            background-color: transparent;
+            outline: none;
+          }
+        }
+      }
+
+      .status {
+        @include ArvoFont(400, normal);
+        font-size: 1.1rem;
+        padding-left: 1rem;
+        color: #616161;
+        text-transform: capitalize;
+      }
+
+      .author {
+        @include ArvoFont(400, normal);
+        font-size: 1.2rem;
+        color: #1f2020;
+        padding-left: 1.5rem;
+        padding-top: 0.7rem;
+      }
+
+      .download {
+        height: 100%;
+        display: grid;
+        place-items: center;
+
+        .btn {
+          all: unset;
+          padding: 0.8rem 2.4rem;
+          color: rgb(26, 115, 232);
+          background-color: $color-bg;
+          @include ArvoFont(400, normal);
+          border-radius: 0.5rem;
+          font-size: 1.55rem;
+          background-color: rgba(95, 99, 104, 0.039);
+          cursor: pointer;
+          border: 0.1rem solid transparent;
+          &:hover {
+            border-color: rgba(95, 99, 104, 0.2);
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .btn {
+      all: unset;
+      padding: 0.8rem 2.4rem;
+      color: rgb(38, 38, 38);
+      background-color: $color-bg;
+      @include ArvoFont(400, normal);
+      border-radius: 0.5rem;
+      font-size: 1.55rem;
+      background-color: rgba(95, 99, 104, 0.039);
+      cursor: pointer;
+      border: 0.1rem solid transparent;
+      text-transform: capitalize;
+      &:hover {
+        border-color: rgba(95, 99, 104, 0.2);
+      }
+    }
+  }
+}

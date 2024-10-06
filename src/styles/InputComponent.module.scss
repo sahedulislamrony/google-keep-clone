@@ -1,0 +1,20 @@
+@import "root";
+
+// input component
+.inputSection {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 5rem;
+
+  // input component
+  .inputBox {
+    width: var(--grid-width);
+    height: auto;
+    border-radius: 0.8rem;
+
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.15),
+      0 -0.2rem 0.4rem rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+}

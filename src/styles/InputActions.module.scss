@@ -1,0 +1,49 @@
+@import "root";
+
+.inputActions {
+  width: 28rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-bg;
+
+  .inputIcons {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .icon {
+      &:last-child {
+        margin-left: 1rem;
+      }
+      @include icon(3.6rem);
+    }
+  }
+  button {
+    text-transform: capitalize;
+    color: $color-primary;
+    background-color: $color-bg;
+    width: 9rem;
+    height: 4rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: grid;
+    place-items: center;
+
+    &:hover {
+      background-color: $color-hover;
+      color: $color-primary;
+    }
+    @include robotoFont(1.5rem, 500);
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}

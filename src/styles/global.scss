@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@import "root";
+@import "breakpoint";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  // for 1 rem = 10px
+}
+
+body {
+  background-color: $color-bg;
+}
+
+/* Container for the grid layout */
+main {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 6rem);
+}
+section[role="main"] {
+  width: 100%;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.main {
+  width: 100%;
+}
+// reset anchor
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+// responsive design
+
+@include respond-to(xs) {
+  html {
+    font-size: 40%;
+  }
+  :root {
+    --grid-width: 40rem;
+    --flex-width: 40rem;
+  }
+}
+@include respond-to(sm) {
+  html {
+    font-size: 55%;
+  }
+  :root {
+    --grid-width: 40rem;
+    --flex-width: 20rem;
+  }
+}
+
+@include respond-to(md) {
+  :root {
+    --grid-width: 60rem;
+    --flex-width: 24rem;
+  }
+}
+
+@include respond-to(lg) {
+  html {
+    font-size: 62.5%;
+  }
+}
