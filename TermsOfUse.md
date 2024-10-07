@@ -31,11 +31,7 @@ We may suspend or terminate your access to the App if you violate these Terms of
 
 We may update these Terms of Use from time to time. Changes will be posted in the App, and your continued use of the App signifies your acceptance of any revised terms.
 
-## 7. Governing Law
-
-These Terms of Use are governed by and construed in accordance with the laws of Bangladesh.
-
-## 8. Contact Us
+## 7. Contact Us
 
 If you have any questions about these Terms of Use, you can contact us at **sahedul.dev@gmail.com.**
 
