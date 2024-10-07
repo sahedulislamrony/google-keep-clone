@@ -155,3 +155,19 @@ To preview the production build locally, execute:
 ```bash
 npm run preview
 ```
+
+## Important
+
+Before running `npm run host`, ensure that your Firebase Hosting is properly set up by executing the following commands:
+
+**1. Log in to Firebase:**
+
+```sh
+firebase login
+```
+
+**2. Initialize Firebase Hosting:**
+
+```sh
+firebase init hosting
+```

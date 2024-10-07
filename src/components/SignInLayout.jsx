@@ -132,7 +132,7 @@ export default function SignInLayout({login = false ,signup = false}) {
                     
                 <div className={style.bottomText}>
                     <div className={style.privacy}>
-                        <p>By signing {text}, you are agreeing to our <a href="/404"> privacy policy </a>and <a href="/404">terms of use.</a> </p>
+                        <p>By signing {text}, you are agreeing to our <a href="https://github.com/sahedulislamrony/google-keep-clone/blob/main/PrivacyPolicy.md"> privacy policy </a>and <a href="https://github.com/sahedulislamrony/google-keep-clone/blob/main/TermsOfUse.md">terms of use.</a> </p>
                     </div>
                     <div className={style.line}></div>
                     <div className={style.account}>

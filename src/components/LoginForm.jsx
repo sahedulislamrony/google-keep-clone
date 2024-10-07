@@ -78,7 +78,7 @@ export default function SignupForm() {
                         <label >Remember Me</label>
                     </div>
                     <div className={style.forgotPassword}>
-                        <a href="#">Forgot Password?</a>
+                        <a href="">Forgot Password?</a>
                     </div>
                 </div>
                 <div className={style.errMsg}>
