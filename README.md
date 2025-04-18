@@ -21,3 +21,5 @@ You can access the live version of the site here: [Google Keep Clone Live](https
 - [**Terms of Use**](TermsOfUse.md) - Terms and conditions for using the application.
 - [**Installation Guide**](Installation.md) - Step-by-step instructions to install and run the project.
 - [**Contributing**](CONTRIBUTING.md) - Guidelines for contributing to the project.
+
+<!-- GitAds-Verify: 1QOY5RIFPCVNKTQ6CC34GDPPOR9VT9YA -->
