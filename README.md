@@ -22,8 +22,4 @@ You can access the live version of the site here: [Google Keep Clone Live](https
 - [**Installation Guide**](Installation.md) - Step-by-step instructions to install and run the project.
 - [**Contributing**](CONTRIBUTING.md) - Guidelines for contributing to the project.
 
-<!-- GitAds-Verify: 1QOY5RIFPCVNKTQ6CC34GDPPOR9VT9YA -->
-## Sponsored
-[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=sahedulislamrony/google-keep-clone@github)](https://gitads.dev/v1/ad-track?source=sahedulislamrony/google-keep-clone@github)
-
 
